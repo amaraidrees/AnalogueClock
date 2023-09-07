@@ -11,24 +11,10 @@ I used rectangles, text, repeater and mousearea.
 Rectangle {                                                                 
         id:id_plate
         anchors.centerIn: parent
-        height: Math.min(id_root.width, id_root.height)
-        width: height
-        radius: width/2
-        color: id_root.color
-        border.color: "black"
-        border.width: 40
         Repeater {                                                                  
             model: 12
-
             Item {
                 id: hourContainer
-
-                property int hour: index
-                height: id_plate.height/2
-                transformOrigin: Item.Bottom
-                rotation: index * 30
-                x: id_plate.width/2
-                y: 0
         Text {                                                 
             anchors {
                 horizontalCenter: parent.horizontalCenter
