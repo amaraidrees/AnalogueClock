@@ -4,8 +4,7 @@ There is no image used in this project
 Red needle represents the seconds that are adjustable, larger black needle used for minutes and small black needle for hours.
 This clock also shows the time in digits and adjustable senconds in the center.
 I used rectangles, text, repeater and mousearea.
-**Rectangles** are used for designing the needles, clcok plate and the center point of the clock.**Text** used to represent the number in the clock.
-            
+**Rectangles** are used for designing the needles, clcok plate and the center point of the clock.**Text** used to represent the number in the clock.           
 **Repeater** is used two times one for the text and secondly for the intervals lines.
 Rectangle {                                                                   //this Rectangle is used to design the clock plate
         id:id_plate
