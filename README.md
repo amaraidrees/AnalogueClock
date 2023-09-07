@@ -17,8 +17,8 @@ Rectangle {
         border.color: "black"
         border.width: 40
         Repeater {                                                                  
-            model: 12
-
+            model: 12 }
+}
             
 **Repeater** is used two times one for the text and secondly for the intervals lines.
 
