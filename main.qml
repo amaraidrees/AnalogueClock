@@ -21,7 +21,7 @@ Window {
 
         onTriggered: id_root.currentDate = new Date()
     }
-    Rectangle {
+    Rectangle {                                                                   //this Rectangle is used to design the clock plate
         id:id_plate
         anchors.centerIn: parent
         height: Math.min(id_root.width, id_root.height)
@@ -30,7 +30,7 @@ Window {
         color: id_root.color
         border.color: "black"
         border.width: 40
-        Repeater {
+        Repeater {                                                                   //Using repeater to represent the numbers in clock
             model: 12
 
             Item {
@@ -44,7 +44,7 @@ Window {
                 y: 0
 
 
-        Text {
+        Text {                                                  //this text shows the hours in the clock from 1 to 12
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
@@ -55,7 +55,7 @@ Window {
             font.pixelSize: id_plate.height*0.09
             font.family: "Comic Sans MS"
         }
-        Text {
+        Text {                                                      //text shows the numbers in the border of the clock
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
@@ -70,7 +70,7 @@ Window {
     }
         }
     }
-    Repeater {
+    Repeater {                                                        //There are 60 intervals in one minute and same in one hour.using repeater for showing 60 intervals
                 model: 60
                 Item {
                     id: secondContainer
@@ -84,42 +84,44 @@ Window {
                     rotation: index * 6
                     x: id_plate.width/2
                     y: 0
-            Rectangle {
+            Rectangle {                                               //This rectangle used to show the intervals around the clock
                 id: fiveminutes
                 x: 0
                 y: id_plate.height*0.05
                            height: id_plate.height*0.04
                            width: 2
                            color: "black"
-                           anchors.top: id_plate.top
-                           anchors.topMargin: 35
-            }}}
 
-    Rectangle {
+            }
+    }}
+
+    Rectangle {                                                          //center of the clock is designed by using rectangle
         id: id_center
         anchors.centerIn: parent
         height: id_plate.height*0.05
         width: height
         radius: width/2
-        color: "black"
+        color: "yellow"
     }
-    SecondNeedle {
+    SecondNeedle {                                                           //seconneedle processng in main.qml
         anchors {
             top: id_plate.top
             bottom: id_plate.bottom
             horizontalCenter: parent.horizontalCenter
         }
-        value: id_root.seconds
+
     }
-    MinutesNeedle {
+    MinutesNeedle {                                                        //minutesNeedle processing in main.qml
         anchors {
             top: id_plate.top
             bottom: id_plate.bottom
             horizontalCenter: parent.horizontalCenter
+
         }
-        value: id_root.minutes
+        value: id_root.minutes                                                 //put minutes into int type variable value
     }
-    HourNeedle {
+    HourNeedle {                                                               //HourNeedle processing in main.qml
+
         anchors {
             top: id_plate.top
             bottom: id_plate.bottom
@@ -128,21 +130,17 @@ Window {
         value: id_root.hours
         valueminute: id_root.minutes
     }
-    Text {
+
+    Text {                                                                          //Time printed in form of Hour:minutes:seconds
         id: id_root1
-
-
         anchors {
             horizontalCenter: id_plate.horizontalCenter
         }
         x: 0
         y: id_plate.height*0.3
-
-
         text: qsTr(id_root.hours+":"+id_root.minutes+":"+id_root.seconds)
         font.pixelSize: id_plate.height*0.05
         font.family: "Comic Sans MS"
     }
-
 
 }

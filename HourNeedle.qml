@@ -7,6 +7,7 @@ Item {
     property int granularity: 12
 
     Rectangle {
+        id: recthour
         width: 8
         height: id_root.height * 0.3
         color: "black"
@@ -15,8 +16,10 @@ Item {
             bottom: id_root.verticalCenter
         }
         antialiasing: true
+
     }
 
     rotation: 360/granularity * (value%granularity) + 360/granularity * (valueminute / 60)
     antialiasing: true
+
 }
