@@ -5,6 +5,8 @@ Red needle represents the seconds that are adjustable, larger black needle used 
 This clock also shows the time in digits and adjustable senconds in the center.
 I used rectangles, text, repeater and mousearea.
 **Rectangles** are used for designing the needles, clcok plate and the center point of the clock.**Text** used to represent the number in the clock.
+
+
 Rectangle {                                                                  
         id:id_plate
         anchors.centerIn: parent
@@ -16,6 +18,8 @@ Rectangle {
         border.width: 40
         Repeater {                                                                  
             model: 12
+
+            
 **Repeater** is used two times one for the text and secondly for the intervals lines.
 
             Item {
