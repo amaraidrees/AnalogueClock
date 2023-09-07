@@ -6,8 +6,6 @@ This clock also shows the time in digits and adjustable senconds in the center.
 I used rectangles, text, repeater and mousearea.
 **Rectangles** are used for designing the needles, clcok plate and the center point of the clock.**Text** used to represent the number in the clock.
 **Repeater** is used two times one for the text and secondly for the intervals lines.
-
-
 Rectangle {                                                                 
         id:id_plate
         anchors.centerIn: parent
@@ -27,6 +25,7 @@ Rectangle {
             font.family: "Comic Sans MS"
         }
         }
+
 **Mouse area is used in secondneedle.qml to drag and adjust the second needle according to youself.**
 
             MouseArea{
